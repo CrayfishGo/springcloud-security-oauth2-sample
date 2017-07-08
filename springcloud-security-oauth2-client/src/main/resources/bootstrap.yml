@@ -1,0 +1,32 @@
+spring:
+    application:
+        name: security-oauth-client
+
+server:
+    port: 8080
+
+security:
+  oauth2:
+    sso:
+      home:
+        secure: false
+        path: /,/**/*.html
+    client:
+      clientId: test
+      clientSecret: test
+      accessTokenUri: http://localhost:8090/oauth/token
+      userAuthorizationUri: http://localhost:8090/oauth/authorize
+    resource:
+      userInfoUri: http://localhost:8090/user
+  basic:
+    enabled: false
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.springframework.web: DEBUG
+
+management:
+  security:
+    enabled: false
+

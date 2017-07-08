@@ -1,0 +1,14 @@
+spring:
+    application:
+        name: security-oauth-demo
+
+server:
+    port: 8090
+    display-name: security-oauth-demo
+
+security:
+  basic:
+    enabled: true
+  user:
+    name: evan
+    password: evan

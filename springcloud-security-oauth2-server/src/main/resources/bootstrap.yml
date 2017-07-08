@@ -1,0 +1,26 @@
+spring:
+    application:
+        name: security-oauth-server
+
+server:
+    port: 8090
+
+
+security:
+  oauth2:
+    client:
+      client-id: test
+      client-secret: test
+      scope: read,write
+      auto-approve-scopes: '.*'
+  basic:
+    enabled: true
+  user:
+    name: admin
+    password: admin
+
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.springframework.web: DEBUG
